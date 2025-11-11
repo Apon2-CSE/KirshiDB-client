@@ -1,10 +1,14 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 import AppLayout from "../layouts/AppLayout";
+import ProtectedRoute from "../router/ProtectedRoute";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import NotFoundPage from "../pages/NotFoundPage";
+import ProfilePage from "../pages/ProfilePage";
+import UpdateProfilePage from "../pages/UpdateProfilePage";
+import ResetPasswordPage from "../pages/ResetPassword";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +18,23 @@ const router = createBrowserRouter([
       { path: "", index: true, element: <HomePage /> },
       { path: "login", element: <LoginPage /> },
       { path: "register", element: <RegisterPage /> },
+      {
+        path: "profile",
+        element: (
+          <ProtectedRoute>
+            <ProfilePage />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "update-profile",
+        element: (
+          <ProtectedRoute>
+            <UpdateProfilePage />
+          </ProtectedRoute>
+        ),
+      },
+      { path: "reset-password", element: <ResetPasswordPage /> },
     ],
   },
   {
