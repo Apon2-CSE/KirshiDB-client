@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 
 const Header = () => {
   return (
-    <header className="navbar shadow-md bg-gray-500">
+    <header className="navbar shadow-md">
       <div className="container mx-auto flex items-center justify-between py-2">
         <motion.div
           whileHover="hover"
@@ -22,7 +22,7 @@ const Header = () => {
                   transition: { type: "tween", duration: 0.2 },
                 },
               }}
-              src="/logo.png"
+              src="/logo.jpg"
               alt="Logo"
               className="h-10 w-10 rounded-full"
             />{" "}

@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 import { useAuth } from "../providers/AuthProvider";
@@ -16,13 +15,13 @@ const ProfilePage = () => {
       <PageTitle title="Profile" />
 
       <motion.div
-        className="relative border border-base-300 rounded-2xl shadow-lg w-fit p-16 mx-auto flex flex-col items-center"
+        className="relative bg-green-50 border border-green-200 rounded-2xl shadow-xl w-fit p-16 mx-auto flex flex-col items-center"
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -25 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
-        <figure className="absolute -top-16 w-32 h-32 rounded-full overflow-hidden bg-base-300 shadow-md">
+        <figure className="absolute -top-16 w-32 h-32 rounded-full overflow-hidden bg-green-100 shadow-md">
           <motion.img
             src={user.photoURL}
             alt="User Avatar"
@@ -33,14 +32,14 @@ const ProfilePage = () => {
         </figure>
 
         <div className="mt-20 text-center">
-          <h2 className="text-2xl font-bold text-primary">
+          <h2 className="text-2xl font-bold text-green-800">
             {user.displayName}
           </h2>
-          <p className="text-base-content/70 mt-1">{user.email}</p>
+          <p className="text-green-700/70 mt-1">{user.email}</p>
         </div>
 
         <motion.button
-          className="btn btn-primary btn-wide mt-6"
+          className="btn bg-green-700 hover:bg-green-800 text-white btn-wide mt-6"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

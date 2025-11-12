@@ -9,13 +9,13 @@ const links = [
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-primary-content py-4">
+    <footer className="bg-slate-600 text-primary-content py-4">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-sm text-center md:text-left flex items-center justify-center md:justify-start space-x-2">
           <motion.img
-            src="/logo.png"
-            className="w-10 h-10"
-            animate={{ rotate: [0, 10, -10] }}
+            src="/logo.jpg"
+            className="w-15 h-15 rounded-full"
+            animate={{ rotate: [10, 0, -10] }}
             transition={{
               duration: 2,
               repeat: Infinity,
@@ -24,7 +24,7 @@ const Footer = () => {
             }}
           />
           <span>
-            &copy; 2025 <strong>KrishiLink</strong>. All rights reserved.
+            &copy; 2025 <strong>KrishiLinkDB</strong>. All rights reserved.
           </span>
         </p>
         <nav className="flex space-x-6">
@@ -49,7 +49,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-sm hover:text-secondary transition-colors duration-300 ease-in-out"
           >
-            Contribute / About Me
+            Contribute
           </a>
         </div>
       </div>
